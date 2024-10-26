@@ -19,19 +19,18 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="fixed top-0 z-50 w-full border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 mx-auto max-w-2xl m-5 rounded-xl">
       <div className="flex h-14 items-center px-4">
         <div className="flex flex-1 items-center justify-between">
-          <Link href="/" className="flex items-center space-x-2">
+          {/* <Link href="/" className="flex items-center space-x-2">
             <span className="hidden font-bold sm:inline-block">
               Mohamed Elshater
             </span>
-          </Link>
+          </Link> */}
           <nav className="flex items-center space-x-6 text-sm font-medium">
             {links.map((link) => {
               const Icon = link.icon;
               const isActive = pathname === link.href;
-              
               return (
                 <Link
                   key={link.href}
@@ -41,13 +40,17 @@ export default function Navbar() {
                     isActive ? "text-foreground" : "text-foreground/60"
                   )}
                 >
-                  <Icon className="h-4 w-4" />
-                  <span className="hidden sm:inline-block">{link.label}</span>
+                  <Icon className="h-6 w-6" />
+                  {/* <span className="hidden sm:inline-block">{link.label}</span> */}
                   {isActive && (
                     <motion.div
                       layoutId="navbar-active"
                       className="absolute -bottom-[1.5rem] left-0 right-0 h-0.5 bg-foreground"
-                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 380,
+                        damping: 30,
+                      }}
                     />
                   )}
                 </Link>

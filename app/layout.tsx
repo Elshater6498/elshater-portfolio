@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head />
       <body
-        className={`${inter.className} antialiased`}
+        className={`${inter.className} antialiased bg-primary-foreground`}
         suppressHydrationWarning
       >
         <ThemeProvider
@@ -33,19 +33,11 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="mx-auto max-w-2xl flex min-h-screen flex-col items-center">
-            <div className="w-full">
-              <div className="">
-                <Navbar />
-              </div>
-            </div>
-            <main className="flex-1 w-full">
+            <Navbar />
+            <main className="flex-1 w-full mb-5 mt-24 rounded-xl bg-foreground/5">
               <div className="px-4 py-10">{children}</div>
             </main>
-            <div className="w-full">
-              <div className="">
-                <Footer />
-              </div>
-            </div>
+            <Footer />
           </div>
           <Toaster />
         </ThemeProvider>

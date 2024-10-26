@@ -1,12 +1,11 @@
 "use client";
 
-import { ArrowRight, FileText, Linkedin, Mail, X } from "lucide-react";
-import { BsGithub, BsTwitterX, BsWhatsapp } from "react-icons/bs";
+import { ArrowRight, FileText, Mail } from "lucide-react";
+import { BsWhatsapp } from "react-icons/bs";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { PageTransition } from "@/components/page-transition";
-import { Badge } from "@/components/ui/badge";
 import {
   Card,
   CardContent,
@@ -43,30 +42,28 @@ export default function Home() {
         >
           <motion.div
             variants={item}
-            className="flex justify-center items-center"
+            className="flex justify-center items-center gap-5 w-full"
           >
-            <div className="flex justify-center gap-5 w-full">
-              <motion.h3
-                initial={{ x: 100, opacity: 0 }}
-                animate={{
-                  x: 0,
-                  opacity: 1,
-                  transition: { duration: 0.2, delay: 0.4 },
-                }}
-                className="text-neutral-700 dark:text-[#C0C0C0] max-md:text-xl font-InterMe"
-              >
-                Frontend Dev
-              </motion.h3>
+            <motion.h3
+              initial={{ x: 100, opacity: 0 }}
+              animate={{
+                x: 0,
+                opacity: 1,
+                transition: { duration: 0.2, delay: 0.4 },
+              }}
+              className="text-neutral-700 dark:text-[#C0C0C0] max-md:text-xl font-InterMe"
+            >
+              Frontend Dev
+            </motion.h3>
 
-              <div className="bg-[#F6F8FA] dark:bg-[#115e3b] h-6 w-6 lg:w-fit lg:px-3 rounded-full flex items-center justify-center gap-x-2">
-                <div className="w-2 h-2 rounded-full animate-ping bg-[#28C780]" />
-                <p className="text-[#2b9364] hidden lg:flex text-xs font-semibold uppercase">
-                  Available for work
-                </p>
-              </div>
+            <div className="bg-[#F6F8FA] dark:bg-[#115e3b] h-6 w-6 lg:w-fit lg:px-3 rounded-full flex items-center justify-center gap-x-2">
+              <div className="w-2 h-2 rounded-full animate-ping bg-[#28C780]" />
+              <p className="text-[#2b9364] hidden lg:flex text-xs font-semibold uppercase">
+                Available for work
+              </p>
             </div>
           </motion.div>
-          <motion.div variants={item} className="space-y-2">
+          <motion.div variants={item} className="space-y-2 flex flex-col gap-2">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
               Mohamed Elshater
             </h1>

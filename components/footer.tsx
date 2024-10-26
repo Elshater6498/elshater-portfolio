@@ -1,14 +1,14 @@
 "use client";
 
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { BsTwitterX } from "react-icons/bs";
 
 export function Footer() {
   return (
-    <footer className="w-full border-t bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="flex flex-col items-center gap-4 py-10 px-4 md:h-24 md:flex-row md:py-0">
+    <footer className="w-full border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 rounded-xl">
+      <div className="flex flex-col items-center gap-4 py-10 px-4 md:h-16 md:flex-row md:py-0">
         <div className="flex flex-1 items-center justify-center md:justify-start">
           <p className="text-sm text-muted-foreground">
             © 2024 Mohamed Elshater – All rights reserved
