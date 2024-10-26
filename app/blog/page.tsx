@@ -1,6 +1,12 @@
 "use client";
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { PageTransition } from "@/components/page-transition";
 
@@ -38,12 +44,12 @@ export default function BlogPage() {
         >
           Blog
         </motion.h1>
-        
+
         <motion.div
           variants={container}
           initial="hidden"
           animate="show"
-          className="grid gap-6 md:grid-cols-2"
+          className="flex flex-col gap-6"
         >
           {posts.map((post, index) => (
             <motion.div key={index} variants={item}>

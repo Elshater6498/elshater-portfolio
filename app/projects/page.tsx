@@ -1,6 +1,12 @@
 "use client";
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -25,13 +31,15 @@ const item = {
 const projects = [
   {
     title: "Business Intelligence Platforms",
-    description: "Developed responsive web components using Bootstrap and SCSS, managed tasks with Jira, and utilized Git for version control.",
+    description:
+      "Developed responsive web components using Bootstrap and SCSS, managed tasks with Jira, and utilized Git for version control.",
     tech: ["Bootstrap", "SCSS", "Jira", "Git"],
     company: "Nsaq - Layout Company",
   },
   {
     title: "SAAS Projects",
-    description: "Built MVPs using React.js, implemented state management with Context API and Redux, and created server-side rendered pages with Next.js.",
+    description:
+      "Built MVPs using React.js, implemented state management with Context API and Redux, and created server-side rendered pages with Next.js.",
     tech: ["React.js", "Next.js", "Redux", "Context API"],
     company: "Alef team",
   },
@@ -48,12 +56,12 @@ export default function ProjectsPage() {
         >
           My Projects
         </motion.h1>
-        
+
         <motion.div
           variants={container}
           initial="hidden"
           animate="show"
-          className="grid gap-6 md:grid-cols-2"
+          className="flex flex-col gap-6"
         >
           {projects.map((project, index) => (
             <motion.div key={index} variants={item}>

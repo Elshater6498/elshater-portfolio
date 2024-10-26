@@ -31,12 +31,12 @@ export default function AboutPage() {
         >
           About Me
         </motion.h1>
-        
+
         <motion.div
           variants={container}
           initial="hidden"
           animate="show"
-          className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+          className="flex flex-col gap-6 "
         >
           <motion.div variants={item}>
             <Card>
@@ -49,13 +49,19 @@ export default function AboutPage() {
               <CardContent className="space-y-4">
                 <div>
                   <h3 className="font-semibold">Front End Developer</h3>
-                  <p className="text-sm text-muted-foreground">Nsaq - Layout Company</p>
-                  <p className="text-sm text-muted-foreground">03/2024 - 08/2024</p>
+                  <p className="text-sm text-muted-foreground">
+                    Nsaq - Layout Company
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    03/2024 - 08/2024
+                  </p>
                 </div>
                 <div>
                   <h3 className="font-semibold">Front End Developer</h3>
                   <p className="text-sm text-muted-foreground">Alef team</p>
-                  <p className="text-sm text-muted-foreground">12/2022 - Present</p>
+                  <p className="text-sm text-muted-foreground">
+                    12/2022 - Present
+                  </p>
                 </div>
               </CardContent>
             </Card>
@@ -71,9 +77,15 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent>
                 <h3 className="font-semibold">Faculty Of Science</h3>
-                <p className="text-sm text-muted-foreground">Geology Department</p>
-                <p className="text-sm text-muted-foreground">Aswan University</p>
-                <p className="text-sm text-muted-foreground">03/2016 - 08/2020</p>
+                <p className="text-sm text-muted-foreground">
+                  Geology Department
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  Aswan University
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  03/2016 - 08/2020
+                </p>
                 <p className="text-sm">Very good with honors</p>
               </CardContent>
             </Card>
@@ -90,11 +102,15 @@ export default function AboutPage() {
               <CardContent className="space-y-2">
                 <div>
                   <p className="font-semibold">Arabic</p>
-                  <p className="text-sm text-muted-foreground">Native or Bilingual Proficiency</p>
+                  <p className="text-sm text-muted-foreground">
+                    Native or Bilingual Proficiency
+                  </p>
                 </div>
                 <div>
                   <p className="font-semibold">English</p>
-                  <p className="text-sm text-muted-foreground">Semi-Professional Working Proficiency</p>
+                  <p className="text-sm text-muted-foreground">
+                    Semi-Professional Working Proficiency
+                  </p>
                 </div>
               </CardContent>
             </Card>
