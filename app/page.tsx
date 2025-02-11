@@ -13,6 +13,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { useTranslation } from "react-i18next";
 
 const container = {
   hidden: { opacity: 0 },
@@ -30,6 +31,7 @@ const item = {
 };
 
 export default function Home() {
+  const { t } = useTranslation();
   return (
     <PageTransition>
       <div className="flex flex-col items-center justify-center space-y-16">
@@ -53,22 +55,22 @@ export default function Home() {
               }}
               className="text-neutral-700 dark:text-[#C0C0C0] max-md:text-xl font-InterMe"
             >
-              Frontend Dev
+              {t("home.title")}
             </motion.h3>
 
             <div className="bg-[#F6F8FA] dark:bg-[#115e3b] h-6 w-6 lg:w-fit lg:px-3 rounded-full flex items-center justify-center gap-x-2">
               <div className="w-2 h-2 rounded-full animate-ping bg-[#28C780]" />
               <p className="text-[#2b9364] hidden lg:flex text-xs font-semibold uppercase">
-                Available for work
+                {t("home.available")}
               </p>
             </div>
           </motion.div>
           <motion.div variants={item} className="space-y-2 flex flex-col gap-2">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
-              Mohamed Elshater
+              {t("home.name")}
             </h1>
             <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-              A Muslim developer based in Aswan, EGYPT
+              {t("home.description")}
             </p>
           </motion.div>
           <motion.div variants={item} className="flex justify-center gap-5">
@@ -78,19 +80,19 @@ export default function Home() {
             >
               <Button variant="outline" className="gap-2">
                 <FileText className="h-4 w-4" />
-                Preview CV
+                {t("home.preview")}
               </Button>
             </Link>
             <Link href="mailto:elshaterm247@gmail.com">
               <Button variant="ghost" size="icon">
                 <Mail className="h-5 w-5" />
-                <span className="sr-only">Email</span>
+                <span className="sr-only">{t("home.email")}</span>
               </Button>
             </Link>
             <Link href="https://wa.me/201151220529" target="_blank">
               <Button variant="ghost" size="icon">
                 <BsWhatsapp className="h-5 w-5" />
-                <span className="sr-only">WhatsApp</span>
+                <span className="sr-only">{t("home.whatsapp")}</span>
               </Button>
             </Link>
           </motion.div>
@@ -106,19 +108,17 @@ export default function Home() {
           {/* About Preview */}
           <motion.section variants={item} className="space-y-4">
             <div className="flex items-center justify-between">
-              <h2 className="text-2xl font-bold">About Me</h2>
+              <h2 className="text-2xl font-bold">{t("home.about-me")}</h2>
               <Link href="/about">
                 <Button variant="ghost" className="gap-2">
-                  View More <ArrowRight className="h-4 w-4" />
+                  {t("home.view-more")} <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>
             </div>
             <Card>
               <CardContent className="pt-6">
                 <p className="text-muted-foreground">
-                  Front-end developer with experience in React.js, Next.js, and
-                  modern web technologies. Currently working at Nsaq - Layout
-                  Company and Alef team.
+                  {t("home.about-description")}
                 </p>
               </CardContent>
             </Card>
@@ -127,10 +127,12 @@ export default function Home() {
           {/* Projects Preview */}
           <motion.section variants={item} className="space-y-4">
             <div className="flex items-center justify-between">
-              <h2 className="text-2xl font-bold">Latest Projects</h2>
+              <h2 className="text-2xl font-bold">
+                {t("home.latest-projects")}
+              </h2>
               <Link href="/projects">
                 <Button variant="ghost" className="gap-2">
-                  View All <ArrowRight className="h-4 w-4" />
+                  {t("home.view-all")} <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>
             </div>
@@ -157,10 +159,10 @@ export default function Home() {
           {/* Blog Preview */}
           <motion.section variants={item} className="space-y-4">
             <div className="flex items-center justify-between">
-              <h2 className="text-2xl font-bold">Latest Posts</h2>
+              <h2 className="text-2xl font-bold">{t("home.latest-posts")}</h2>
               <Link href="/blog">
                 <Button variant="ghost" className="gap-2">
-                  View All <ArrowRight className="h-4 w-4" />
+                  {t("home.view-all")} <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>
             </div>

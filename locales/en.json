@@ -6,8 +6,28 @@
     "blog": "Blog",
     "contact": "Contact"
   },
+  "home": {
+    "title": "Frontend Dev",
+    "available": "Available for work",
+    "name": "Mohamed Elshater",
+    "description": "A Muslim developer based in Aswan, EGYPT",
+    "preview": "Preview CV",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "about-me": "About Me",
+    "view-more": "View More",
+    "about-description": "Front-end developer with experience in React.js, Next.js, and modern web technologies. Currently working at Nsaq - Layout Company and Alef team.",
+    "latest-projects": "Latest Projects",
+    "latest-posts": "Latest Posts",
+    "view-all": "View All"
+  },
   "projects": {
     "title": "Projects",
-    "visitProject": "Visit Project"
+    "visitProject": "Visit Project",
+    "category": {
+      "web": "Web Development",
+      "mobile": "Mobile Development",
+      "design": "UI/UX Design"
+    }
   }
 } 

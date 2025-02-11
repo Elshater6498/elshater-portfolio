@@ -6,8 +6,28 @@
     "blog": "المدونة",
     "contact": "اتصل بنا"
   },
+  "home": {
+    "title": "مطور واجهات امامية",
+    "available": "متاح للعمل",
+    "name": "محمد الشاطر",
+    "description": "مطور مسلم من أسوان، مصر",
+    "preview": "عرض السيرة الذاتية",
+    "email": "البريد الإلكتروني",
+    "whatsapp": "واتساب",
+    "about-me": "عني",
+    "view-more": "عرض المزيد",
+    "about-description": "مطور واجهة مستخدم ذو خبرة في React.js وNext.js وتقنيات الويب الحديثة. أعمل حاليًا في شركة Nsaq وفريق Alef.",
+    "latest-projects": "آخر المشاريع",
+    "latest-posts": "آخر المقالات",
+    "view-all": "عرض الكل"
+  },
   "projects": {
     "title": "المشاريع",
-    "visitProject": "زيارة المشروع"
+    "visitProject": "زيارة المشروع",
+    "category": {
+      "web": "تطوير تطبيقات الويب",
+      "mobile": "تطوير تطبيقات الجوال",
+      "design": "تصميم واجهات المستخدم"
+    }
   }
 } 

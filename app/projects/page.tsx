@@ -15,6 +15,7 @@ import { PageTransition } from "@/components/page-transition";
 import Image from "next/image";
 import { projects } from "@/data/projects";
 import { useTranslation } from "react-i18next";
+import { useLanguage } from "@/components/language-provider";
 
 const container = {
   hidden: { opacity: 0 },
@@ -33,6 +34,7 @@ const item = {
 
 export default function ProjectsPage() {
   const { t } = useTranslation();
+  const { language } = useLanguage();
 
   return (
     <PageTransition>
@@ -56,24 +58,29 @@ export default function ProjectsPage() {
               <Card className="overflow-hidden">
                 <div className="relative h-48 w-full">
                   <Image
-                    src={project.thumbnail}
-                    alt={project.title}
+                    src={project.img}
+                    alt={
+                      language === "en" ? project.title.en : project.title.ar
+                    }
                     fill
                     className="object-cover"
                   />
                 </div>
                 <CardHeader>
                   <CardTitle className="line-clamp-1">
-                    {project.title}
+                    {language === "en" ? project.title.en : project.title.ar}
                   </CardTitle>
-                  <CardDescription>{project.category}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p className="mb-4 line-clamp-3">{project.description}</p>
+                  <p className="mb-4 line-clamp-3">
+                    {language === "en"
+                      ? project.description.en
+                      : project.description.ar}
+                  </p>
                   <Link href={project.link} target="_blank">
-                    <Button className="w-full">
-                      {t("projects.visitProject")}{" "}
-                      <ExternalLink className="ml-2 h-4 w-4" />
+                    <Button className="">
+                      {t("projects.visitProject")}
+                      <ExternalLink className="m-2 h-4 w-4" />
                     </Button>
                   </Link>
                 </CardContent>
