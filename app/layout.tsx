@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Toaster } from "@/components/ui/sonner";
+import { LanguageProvider } from "@/components/language-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,14 +33,16 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="mx-auto max-w-2xl flex min-h-screen flex-col items-center">
-            <Navbar />
-            <main className="flex-1 w-full mb-5 mt-24 rounded-xl bg-foreground/5">
-              <div className="px-4 py-10">{children}</div>
-            </main>
-            <Footer />
-          </div>
-          <Toaster />
+          <LanguageProvider>
+            <div className="mx-auto max-w-2xl flex min-h-screen flex-col items-center">
+              <Navbar />
+              <main className="flex-1 w-full mb-5 mt-24 rounded-xl bg-foreground/5">
+                <div className="px-4 py-10">{children}</div>
+              </main>
+              <Footer />
+            </div>
+            <Toaster />
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

@@ -4,30 +4,28 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "./theme-toggle";
+import { LanguageSwitcher } from "./language-switcher";
 import { Home, User, Briefcase, BookOpen, Mail } from "lucide-react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const links = [
-  { href: "/", label: "Home", icon: Home },
-  { href: "/about", label: "About", icon: User },
-  { href: "/projects", label: "Projects", icon: Briefcase },
-  { href: "/blog", label: "Blog", icon: BookOpen },
-  { href: "/contact", label: "Contact", icon: Mail },
+  { href: "/", label: "nav.home", icon: Home },
+  { href: "/about", label: "nav.about", icon: User },
+  { href: "/projects", label: "nav.projects", icon: Briefcase },
+  { href: "/blog", label: "nav.blog", icon: BookOpen },
+  { href: "/contact", label: "nav.contact", icon: Mail },
 ];
 
 export default function Navbar() {
   const pathname = usePathname();
+  const { t } = useTranslation();
 
   return (
     <header className="fixed top-0 z-50 w-full border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 mx-auto max-w-2xl m-5 rounded-xl">
       <div className="flex h-14 items-center px-4">
         <div className="flex flex-1 items-center justify-between">
-          {/* <Link href="/" className="flex items-center space-x-2">
-            <span className="hidden font-bold sm:inline-block">
-              Mohamed Elshater
-            </span>
-          </Link> */}
-          <nav className="flex items-center space-x-6 text-sm font-medium">
+          <nav className="flex items-center gap-5 text-sm font-medium">
             {links.map((link) => {
               const Icon = link.icon;
               const isActive = pathname === link.href;
@@ -41,7 +39,6 @@ export default function Navbar() {
                   )}
                 >
                   <Icon className="h-6 w-6" />
-                  {/* <span className="hidden sm:inline-block">{link.label}</span> */}
                   {isActive && (
                     <motion.div
                       layoutId="navbar-active"
@@ -57,7 +54,8 @@ export default function Navbar() {
               );
             })}
           </nav>
-          <div className="flex items-center justify-end">
+          <div className="flex items-center gap-2">
+            <LanguageSwitcher />
             <ThemeToggle />
           </div>
         </div>

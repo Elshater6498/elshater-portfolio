@@ -14,6 +14,7 @@ import { motion } from "framer-motion";
 import { PageTransition } from "@/components/page-transition";
 import Image from "next/image";
 import { projects } from "@/data/projects";
+import { useTranslation } from "react-i18next";
 
 const container = {
   hidden: { opacity: 0 },
@@ -31,6 +32,8 @@ const item = {
 };
 
 export default function ProjectsPage() {
+  const { t } = useTranslation();
+
   return (
     <PageTransition>
       <div className="container py-10">
@@ -39,7 +42,7 @@ export default function ProjectsPage() {
           animate={{ opacity: 1, y: 0 }}
           className="mb-8 text-4xl font-bold"
         >
-          Projects
+          {t("projects.title")}
         </motion.h1>
 
         <motion.div
@@ -69,7 +72,8 @@ export default function ProjectsPage() {
                   <p className="mb-4 line-clamp-3">{project.description}</p>
                   <Link href={project.link} target="_blank">
                     <Button className="w-full">
-                      Visit Project <ExternalLink className="ml-2 h-4 w-4" />
+                      {t("projects.visitProject")}{" "}
+                      <ExternalLink className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>
                 </CardContent>

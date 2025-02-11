@@ -71,9 +71,9 @@ export default function Home() {
               A Muslim developer based in Aswan, EGYPT
             </p>
           </motion.div>
-          <motion.div variants={item} className="flex justify-center space-x-4">
+          <motion.div variants={item} className="flex justify-center gap-5">
             <Link
-              href="https://drive.google.com/file/d/1QTyqOgSRW5csqR3KzIyEc8vimQaNaoO2/view?usp=sharing"
+              href="https://drive.google.com/file/d/1jhOegROi2oh9WLuGEi4BIvA_0AiDrdxX/view?usp=sharing"
               target="_blank"
             >
               <Button variant="outline" className="gap-2">
