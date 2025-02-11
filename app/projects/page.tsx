@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -77,8 +71,12 @@ export default function ProjectsPage() {
                       ? project.description.en
                       : project.description.ar}
                   </p>
-                  <Link href={project.link} target="_blank">
-                    <Button className="">
+                  <Link
+                    href={project.link}
+                    target="_blank"
+                    className="flex items-center justify-end"
+                  >
+                    <Button>
                       {t("projects.visitProject")}
                       <ExternalLink className="m-2 h-4 w-4" />
                     </Button>

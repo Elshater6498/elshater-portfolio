@@ -14,6 +14,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { useTranslation } from "react-i18next";
+import { useLanguage } from "@/components/language-provider";
+import { ArrowLeft } from "lucide-react";
 
 const container = {
   hidden: { opacity: 0 },
@@ -32,6 +34,7 @@ const item = {
 
 export default function Home() {
   const { t } = useTranslation();
+  const { language } = useLanguage();
   return (
     <PageTransition>
       <div className="flex flex-col items-center justify-center space-y-16">
@@ -111,7 +114,12 @@ export default function Home() {
               <h2 className="text-2xl font-bold">{t("home.about-me")}</h2>
               <Link href="/about">
                 <Button variant="ghost" className="gap-2">
-                  {t("home.view-more")} <ArrowRight className="h-4 w-4" />
+                  {t("home.view-more")}
+                  {language === "en" ? (
+                    <ArrowRight className="h-4 w-4" />
+                  ) : (
+                    <ArrowLeft className="h-4 w-4" />
+                  )}
                 </Button>
               </Link>
             </div>
@@ -132,7 +140,12 @@ export default function Home() {
               </h2>
               <Link href="/projects">
                 <Button variant="ghost" className="gap-2">
-                  {t("home.view-all")} <ArrowRight className="h-4 w-4" />
+                  {t("home.view-all")}
+                  {language === "en" ? (
+                    <ArrowRight className="h-4 w-4" />
+                  ) : (
+                    <ArrowLeft className="h-4 w-4" />
+                  )}
                 </Button>
               </Link>
             </div>
@@ -162,7 +175,12 @@ export default function Home() {
               <h2 className="text-2xl font-bold">{t("home.latest-posts")}</h2>
               <Link href="/blog">
                 <Button variant="ghost" className="gap-2">
-                  {t("home.view-all")} <ArrowRight className="h-4 w-4" />
+                  {t("home.view-all")}
+                  {language === "en" ? (
+                    <ArrowRight className="h-4 w-4" />
+                  ) : (
+                    <ArrowLeft className="h-4 w-4" />
+                  )}
                 </Button>
               </Link>
             </div>
